@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container-header"><h1 id="color-titulo">Problema del cambio</h1></header>
+    <div class="container-principal">
+        <div id="MensajeInicio"><h1><span id="MensajeCajaVacia"></span></h1></div>
+        <div class="container-formularios">
+            <div id="llenarCaja" class="container-formulario-uno">
+                <form id="formulario-uno" action="">
+                    <div>
+                        <label for="valoresCaja">¿Cuántos billetes y monedas de diferentes denominaciones ingresarás? <span>(Ingrese la información de la siguiente forma: 1000, 2; 200,3)</span></label>
+                        <input class="input-styles" id="denominaciones-cantidad" type="text" name="valoresCaja" required placeholder="denominacion, cantidad "/>
+                    </div>
+                    <div>
+                        <input type="button" value="Llenar Caja" onclick="obtenerValores()" />
+                    </div>
+                </form>
+            </div>
+            <div id="interactuar"  class="container-formulario-dos">
+                <div>Usted debe: <span id="deuda"></span></div>
+                <form id="formulario_dos" action="">
+                    <div>
+                        <label for="pagoUsuario">Usted paga con: </label>
+                        <input class="input-styles" type="number" name="pagoUsuario" id="pagoUsuario" placeholder="Cantidad con la que paga" required/>
+                    </div>
+                    <div>
+                        <input type="button" value="Pagar" onclick="pagarDeuda()" />
+                    </div>
+                </form>
+                <div>Su vuelto: <span id="vuelto"></span></div>
+                <div id="vueltoFor"><span ></span></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
